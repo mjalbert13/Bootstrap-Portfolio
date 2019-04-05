@@ -6,21 +6,136 @@
     <title>My Portfolio Page </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+<style>
+body {
+  background-image: url(assets/folk-pattern.png);
+}
+
+nav {
+  background: #666666;
+  border: 3px solid teal;
+}
+.container {
+  background: #dddddd;
+  width: 500px;
+  margin: 25px;
+  padding: 10px;
+  border: 3px solid #cccccc;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.bd-example {
+  text-align: center;
+  position: relative;
+  justify-content:flex-start; 
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  color: teal;
+  border-bottom:3px solid #666666;
+}
+
+.carousel-caption {
+  background: #666666;
+  color: #cccccc;
+}
+footer {
+  background: #666666;
+  color: #dddddd;
+  text-align: center;
+  border-top:3px solid teal;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Matt Jalber</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="index.html">About <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="Portfolio.html">Portfolio</a>
-            <a class="nav-item nav-link" href="contact.html">Contact</a>
-          </div>
-        </div>
+        <a class="navbar-brand" href="#">Matt Jalbert</a>
+        <div class="collapse navbar-collapse">
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Concotact</a>
+          </li>
+        </ul>
+      </div>
       </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+        <h1>Portfolio</h1>
+      </div>
+      <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" style="width: 400px; height: 400px">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="3" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="4" class="active"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/Jay.jpg" class="d-block w-100" alt="Jay" width="400px">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Trivia Game</h5>
+                <p>Simple trivia game</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/concert.jpg" class="d-block w-100" alt="concert" width="400px">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Rock Paper Scisors</h5>
+                <p>RPS Game</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/powday.jpg" class="d-block w-100" alt="powday" width="400px">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Word Guess</h5>
+                <p>Computer guesses the word</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/sox.jpg" class="d-block w-100" alt="Sox" width="400px">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Info Widget</h5>
+                <p>Gives info about apps</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/winterpark.jpg" class="d-block w-100" alt="winterpark" width="400px">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>RPG Game</h5>
+                <p>Simple game</p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+       </div>
+      </div>
+    </div>
+    <footer>
+      <h4>Copyright (c)</h4>
+    </footer>
 </body>
 </html>
